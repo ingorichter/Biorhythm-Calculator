@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D821228C265AE24A00407AD3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C43C702658BF1A00467297 /* ContentView.swift */; };
+		D8212297265AE41200407AD3 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8212296265AE41200407AD3 /* GraphView.swift */; };
 		D8C43C6F2658BF1A00467297 /* Biorhythm_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C43C6E2658BF1A00467297 /* Biorhythm_CalculatorApp.swift */; };
-		D8C43C712658BF1A00467297 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C43C702658BF1A00467297 /* ContentView.swift */; };
 		D8C43C732658BF1B00467297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C43C722658BF1B00467297 /* Assets.xcassets */; };
 		D8C43C762658BF1B00467297 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C43C752658BF1B00467297 /* Preview Assets.xcassets */; };
 		D8C43C812658BF1B00467297 /* Biorhythm_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C43C802658BF1B00467297 /* Biorhythm_CalculatorTests.swift */; };
 		D8C43C8C2658BF1B00467297 /* Biorhythm_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C43C8B2658BF1B00467297 /* Biorhythm_CalculatorUITests.swift */; };
+		D8C43C9D265976B800467297 /* BiorhythmValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C43C9C265976B800467297 /* BiorhythmValueView.swift */; };
+		D8C43CA22659771700467297 /* ActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C43CA12659771700467297 /* ActionButtonView.swift */; };
+		D8C43CA726599A4A00467297 /* BiorhythmCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C43CA626599A4A00467297 /* BiorhythmCalculator.swift */; };
+		D8C43CAC2659CE2A00467297 /* DatesPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C43CAB2659CE2A00467297 /* DatesPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D8212296265AE41200407AD3 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		D8C43C6B2658BF1A00467297 /* Biorhythm Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Biorhythm Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C43C6E2658BF1A00467297 /* Biorhythm_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biorhythm_CalculatorApp.swift; sourceTree = "<group>"; };
 		D8C43C702658BF1A00467297 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +51,10 @@
 		D8C43C872658BF1B00467297 /* Biorhythm CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Biorhythm CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C43C8B2658BF1B00467297 /* Biorhythm_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biorhythm_CalculatorUITests.swift; sourceTree = "<group>"; };
 		D8C43C8D2658BF1B00467297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8C43C9C265976B800467297 /* BiorhythmValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiorhythmValueView.swift; sourceTree = "<group>"; };
+		D8C43CA12659771700467297 /* ActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonView.swift; sourceTree = "<group>"; };
+		D8C43CA626599A4A00467297 /* BiorhythmCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiorhythmCalculator.swift; sourceTree = "<group>"; };
+		D8C43CAB2659CE2A00467297 /* DatesPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatesPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +105,14 @@
 		D8C43C6D2658BF1A00467297 /* Biorhythm Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				D8C43CB02659D0B600467297 /* Model */,
 				D8C43C6E2658BF1A00467297 /* Biorhythm_CalculatorApp.swift */,
 				D8C43C702658BF1A00467297 /* ContentView.swift */,
+				D8212296265AE41200407AD3 /* GraphView.swift */,
+				D8C43CAB2659CE2A00467297 /* DatesPickerView.swift */,
+				D8C43CA12659771700467297 /* ActionButtonView.swift */,
+				D8C43CA626599A4A00467297 /* BiorhythmCalculator.swift */,
+				D8C43C9C265976B800467297 /* BiorhythmValueView.swift */,
 				D8C43C722658BF1B00467297 /* Assets.xcassets */,
 				D8C43C772658BF1B00467297 /* Info.plist */,
 				D8C43C742658BF1B00467297 /* Preview Content */,
@@ -128,6 +144,13 @@
 				D8C43C8D2658BF1B00467297 /* Info.plist */,
 			);
 			path = "Biorhythm CalculatorUITests";
+			sourceTree = "<group>";
+		};
+		D8C43CB02659D0B600467297 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8C43C712658BF1A00467297 /* ContentView.swift in Sources */,
+				D8C43CAC2659CE2A00467297 /* DatesPickerView.swift in Sources */,
+				D821228C265AE24A00407AD3 /* ContentView.swift in Sources */,
+				D8212297265AE41200407AD3 /* GraphView.swift in Sources */,
 				D8C43C6F2658BF1A00467297 /* Biorhythm_CalculatorApp.swift in Sources */,
+				D8C43CA726599A4A00467297 /* BiorhythmCalculator.swift in Sources */,
+				D8C43CA22659771700467297 /* ActionButtonView.swift in Sources */,
+				D8C43C9D265976B800467297 /* BiorhythmValueView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct Biorhythm_CalculatorApp: App {
+    @State private var birthdate = Date()
+    @State private var targetdate = Date()
+    @State private var brvalue = BRValue()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(birthdate: $birthdate, targetdate: $targetdate, brvalue: $brvalue);
         }
     }
 }
