@@ -26,6 +26,7 @@ struct ActionButtonView: View {
             Button(action: onReset, label: {
                 Text("Reset")
                     .font(.title)
+                    .multilineTextAlignment(.center)
                     .padding()
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
@@ -34,6 +35,7 @@ struct ActionButtonView: View {
             })
             .padding(.horizontal)
         }
+        .padding()
     }
 }
 

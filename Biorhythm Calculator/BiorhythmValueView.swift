@@ -10,33 +10,56 @@ import SwiftUI
 struct BiorhythmValueView: View {
     @Binding var brvalue: BRValue
 
-    var body: some View {
-        VStack {
-            HStack {
-                Text("Target Date")
-                    .modifier(TextModifier())
-                Text("Physical")
-                    .modifier(TextModifier())
-                Text("Emotional")
-                    .modifier(TextModifier())
-                Text("Intellectual")
-                    .modifier(TextModifier())
-            }
-            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
-
-            HStack {
-                Text(brvalue.targetdate.description)
-                    .modifier(TextModifier())
-                Text(brvalue.physical.toString())
-                    .modifier(TextModifier())
-                Text(brvalue.emotional.toString())
-                    .modifier(TextModifier())
-                Text(brvalue.intellectual.toString())
-                    .modifier(TextModifier())
-            }
-            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+    var targetDate: some View {
+        VStack(alignment: .center, spacing: 0) {
+            Text("Target Date")
+                .modifier(TextModifier())
+//            Spacer()
+            Text(brvalue.targetdate, style: .date)
+                .modifier(TextModifier())
         }
-        .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+    }
+    
+    var physical: some View {
+        VStack(alignment: .center, spacing: 0) {
+            Text("Physical")
+                .modifier(TextModifier())
+//            Spacer()
+            Text(brvalue.physical.toString())
+                .modifier(TextModifier())
+        }
+    }
+    
+    var emotional: some View {
+        VStack(alignment: .center, spacing: 0) {
+            Text("Emotional")
+                .modifier(TextModifier())
+//            Spacer()
+            Text(brvalue.emotional.toString())
+                .modifier(TextModifier())
+        }
+    }
+    
+    var intellectual: some View {
+        VStack(alignment: .center, spacing: 0) {
+            Text("Intellectual")
+                .modifier(TextModifier())
+//            Spacer()
+            Text(brvalue.intellectual.toString())
+                .modifier(TextModifier())
+        }
+    }
+    
+    var body: some View {
+        HStack {
+            targetDate
+            Spacer()
+            physical
+            Spacer()
+            emotional
+            Spacer()
+            intellectual
+        }
     }
 }
 
@@ -44,7 +67,9 @@ struct TextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .multilineTextAlignment(.center)
-            .padding(.horizontal)
+            .padding(.vertical, 2.0)
+            .font(.footnote)
+            .allowsTightening(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
     }
 }
 

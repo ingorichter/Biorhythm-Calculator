@@ -15,17 +15,18 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Form {
-                Section(header: Text("Dates")) {
-                    DatesPickerView(birthdate: $birthdate, targetdate: $targetdate)
-                }
                 Section {
+                    DatesPickerView(birthdate: $birthdate, targetdate: $targetdate)
                     ActionButtonView(onCalc: calc, onReset: reset)
+                        .padding(.horizontal)
                 }
+                
                 Section {
                     BiorhythmValueView(brvalue: $brvalue)
                 }
+
                 Section {
-                    GraphView()
+                    GraphView().padding()
                 }
             }
         }
@@ -54,6 +55,7 @@ struct ContentView_Previews: PreviewProvider {
     @State static var brvalue = BRValue()
 
     static var previews: some View {
-        ContentView(birthdate: $birthdate, targetdate: $targetdate,brvalue: $brvalue);
+        ContentView(birthdate: $birthdate, targetdate: $targetdate,brvalue: $brvalue)
+            .previewDevice("iPhone 8 Plus");
     }
 }
