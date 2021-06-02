@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct BRValue {
-    var physical: Double
-    var emotional: Double
-    var intellectual: Double
-    var birthdate: Date
-    var targetdate: Date
+class BRValue: ObservableObject {
+    @Published var physical: Double
+    @Published var emotional: Double
+    @Published var intellectual: Double
+    @Published var birthdate: Date
+    @Published var targetdate: Date
     
     init(physical: Double = 0.0, emotional: Double = 0.0, intellectual: Double = 0.0, birthDate: Date = Date(), targetDate: Date = Date()) {
         self.physical = physical

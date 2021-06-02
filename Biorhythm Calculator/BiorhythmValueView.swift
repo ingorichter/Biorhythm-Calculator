@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct BiorhythmValueView: View {
-    @Binding var brvalue: BRValue
+    @ObservedObject var brvalue = BRValue()
 
     var targetDate: some View {
         VStack(alignment: .center, spacing: 0) {
             Text("Target Date")
                 .modifier(TextModifier())
-//            Spacer()
             Text(brvalue.targetdate, style: .date)
                 .modifier(TextModifier())
         }
@@ -24,7 +23,6 @@ struct BiorhythmValueView: View {
         VStack(alignment: .center, spacing: 0) {
             Text("Physical")
                 .modifier(TextModifier())
-//            Spacer()
             Text(brvalue.physical.toString())
                 .modifier(TextModifier())
         }
@@ -34,7 +32,6 @@ struct BiorhythmValueView: View {
         VStack(alignment: .center, spacing: 0) {
             Text("Emotional")
                 .modifier(TextModifier())
-//            Spacer()
             Text(brvalue.emotional.toString())
                 .modifier(TextModifier())
         }
@@ -44,7 +41,6 @@ struct BiorhythmValueView: View {
         VStack(alignment: .center, spacing: 0) {
             Text("Intellectual")
                 .modifier(TextModifier())
-//            Spacer()
             Text(brvalue.intellectual.toString())
                 .modifier(TextModifier())
         }
@@ -80,9 +76,9 @@ extension Double {
 }
 
 struct BiorhythmValueView_Previews: PreviewProvider {
-    @State static var brValue = BRValue()
+    @State static var brValue = BRValue(physical: 0.5, emotional: 0.3, intellectual: 0.9, birthDate: Date(), targetDate: Date())
 
     static var previews: some View {
-        BiorhythmValueView(brvalue: $brValue)
+        BiorhythmValueView(brvalue: brValue)
     }
 }

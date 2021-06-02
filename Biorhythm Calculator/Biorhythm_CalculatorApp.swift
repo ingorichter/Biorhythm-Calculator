@@ -15,7 +15,7 @@ struct Biorhythm_CalculatorApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView(birthdate: $birthdate, targetdate: $targetdate, brvalue: $brvalue);
+            ContentView(birthdate: $birthdate, targetdate: $targetdate, brvalue: brvalue);
         }
     }
 }

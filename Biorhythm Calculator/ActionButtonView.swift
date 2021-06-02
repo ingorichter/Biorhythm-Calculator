@@ -15,17 +15,17 @@ struct ActionButtonView: View {
         HStack() {
             Button(action: onCalc, label: {
                 Text("Calc")
-                    .font(.title)
+                    .font(.title2)
                     .padding()
                     .overlay(
                         RoundedRectangle(cornerRadius: 20)
                             .stroke(Color.blue, lineWidth: 2)
                     )
             })
-            .padding(.horizontal)
+//            .padding(.horizontal)
             Button(action: onReset, label: {
                 Text("Reset")
-                    .font(.title)
+                    .font(.title2)
                     .multilineTextAlignment(.center)
                     .padding()
                     .overlay(
@@ -33,9 +33,8 @@ struct ActionButtonView: View {
                             .stroke(Color.blue, lineWidth: 2)
                     )
             })
-            .padding(.horizontal)
-        }
-        .padding()
+//            .padding(.horizontal)
+        }.padding(1.0)
     }
 }
 
